@@ -1,7 +1,8 @@
 .intro-list__link {
-  display: inline-block;
+  display: block;
   .container();
   .padding(30px; 30px);
+  width: 100%;
   font-size: 19px;
   line-height: 24px;
   color: white;
@@ -12,5 +13,20 @@
 
   &--toys {
     background-color: @light-green-dark;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .intro-list {
+    display: flex;
+  }
+
+  .intro-list__item {
+    width: 50%;
+  }
+
+  .intro-list__link {
+    .padding(35px; 34px);
+    padding-left: 36px;
   }
 }

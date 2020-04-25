@@ -34,3 +34,56 @@
 .contacts__wrapper-button {
   .container();
 }
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    .padding(87px; 57px);
+  }
+
+  .contacts__wrapper {
+    .container-tablet();
+  }
+
+  .contacts__title {
+    margin-bottom: 65px;
+  }
+
+  .contacts__info--wrapper {
+    display: flex;
+  }
+
+  .contacts__write {
+    width: 230px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    .container-desktop();
+    .padding (94px; 55px);
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contacts__wrapper {
+    padding: 0;
+    margin: 0;
+    padding-left: 175px;
+    width: 525px;
+  }
+
+  .contacts__info--wrapper {
+    display: block;
+  }
+
+  .contacts__map {
+    margin: 0;
+    width: 525px;
+  }
+
+  .contacts__wrapper-button {
+    margin: 0;
+    padding: 0;
+    transform: translate(175px, -100%);
+  }
+}

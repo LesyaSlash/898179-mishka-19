@@ -1,0 +1,17 @@
+.product-list {
+  display: none;
+}
+
+@media (min-width: @desktop-width) {
+  .product-list {
+    display: flex;
+    order: 4;
+    padding-top: 24px;
+  }
+
+  .product-list__link {
+    font-weight: bold;
+    font-size: 15px;
+    color: @black;
+  }
+}

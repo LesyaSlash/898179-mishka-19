@@ -18,7 +18,6 @@
 
 .week-product__info {
   width: 100%;
-  margin-bottom: 28px;
   border-collapse: collapse;
   line-height: 20px;
   vertical-align: center;
@@ -41,4 +40,73 @@
 
 .week-product__add-cart {
   font-size: 17px;
+}
+
+@media (min-width: @tablet-width) {
+  .week-product {
+    .container-tablet();
+    .padding(43px; 68px);
+  }
+
+  .week-product__title--wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .week-product__wrapper {
+    margin-top: 55px;
+    background: url("../img/triple-set-tablet@1x.jpg") no-repeat right top;
+  }
+
+  .week-product__info--wrapper {
+    width: 292px;
+  }
+
+  .week-product__text {
+    margin-bottom: 55px;
+  }
+
+  .week-product__info {
+    margin-bottom: 59px;
+  }
+
+  .week-product__price {
+    margin-bottom: 34px;
+  }
+
+  .week-product__image {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .week-product {
+    .container-desktop();
+    .padding(71px; 96px);
+    background: url("../img/triple-set-desktop@1x.jpg") no-repeat right top;
+    background-origin: content-box;
+  }
+
+  .week-product__wrapper {
+    background: none;
+  }
+
+  .week-product__title--wrapper {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-top: 63px;
+  }
+
+  .week-product__info--wrapper {
+    margin-top: 52px;
+    margin-left: 175px;
+  }
+
+  .week-product__text {
+    margin-bottom: 66px;
+  }
+
+  .week-product__info {
+    margin-bottom: 127px;
+  }
 }

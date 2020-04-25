@@ -14,3 +14,25 @@
   line-height: 20px;
   color: @black;
 }
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    .container-tablet();
+    .padding(60px; 80px);
+  }
+
+  .advantages__list {
+    column-count: 2;
+  }
+
+  .advantages__item {
+    width: 300px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages {
+    .container-desktop();
+    padding: 70px 225px 89px;
+  }
+}

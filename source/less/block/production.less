@@ -28,3 +28,59 @@
   font-size: 17px;
   line-height: 16px;
 }
+
+@media (min-width: @tablet-width) {
+  .production {
+    .padding(0; 46px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .production__video {
+    order: -1;
+    min-height: 455px; /*временно для сетки*/
+    background-color: @light-green-form; /*временно для сетки*/
+  }
+
+  .production__title {
+    margin-top: 43px;
+    margin-bottom: 41px;
+  }
+
+  .production__wrapper {
+    padding: 0 42px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .production {
+    height: 455px;
+    flex-grow: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .production__video {
+    width: 682px;
+  }
+
+  .production__title {
+    width: 320px;
+    padding: 0;
+    .padding(100px; 42px);
+    margin: 0;
+  }
+
+  .production__wrapper {
+    width: 320px;
+    padding: 0;
+  }
+
+  .production__text {
+    margin-bottom: 50px;
+  }
+
+  .production__order {
+    width: 230px;
+  }
+}
