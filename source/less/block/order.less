@@ -22,7 +22,6 @@
   padding: 0;
   margin-bottom: 33px;
   border: none;
-  border-top: 1px solid @light-green-form;
 }
 
 .order__field-group:last-child {
@@ -30,12 +29,27 @@
 }
 
 .order__legend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   min-width: 63px;
   font-weight: bold;
   font-size: 17px;
   line-height: 16px;
   text-transform: uppercase;
   color: @light-green;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 198px;
+    background-color: @light-green;
+  }
+
+  &--mail::after {
+    width: 179px;
+  }
 }
 
 .order__label {
@@ -69,4 +83,119 @@
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .order__wrapper {
+    width: 100%;
+    padding: 68px 0 50px;
+  }
+
+  .order__text {
+    .container-tablet();
+    margin-bottom: 10px;
+  }
+
+  .order__field-group {
+    padding: 0;
+    margin: 0;
+    border: none;
+
+    &--color,
+    &--phone,
+    &--mail {
+      background-color: @grey-bg;
+    }
+  }
+
+  .order__field-group-wrapper {
+    .container-tablet();
+    .padding (50px; 50px);
+    display: flex;
+    align-items: baseline;
+  }
+
+  .order__phone-wrapper {
+    padding-bottom: 14px;
+  }
+
+  .order__mail-wrapper {
+    padding-top: 10px;
+  }
+
+  .order__legend {
+    display: block;
+    min-width: 166px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .order__list {
+    flex-grow: 1;
+
+    &--color {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .order__item {
+    display: flex;
+    justify-content: space-between;
+
+    &--color {
+      min-width: 240px; /*временно для сетки*/
+    }
+  }
+
+  .order__label--name {
+    margin-right: 25px;
+  }
+
+  .order__add-group {
+    .container-tablet();
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .order__submit {
+    width: 230px;
+    order: -1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order__wrapper {
+    width: 100%;
+    padding-top: 112px;
+  }
+
+  .order__text {
+    width: 1150px;
+    padding: 0 225px;
+  }
+
+  .order__field-group-wrapper {
+    width: 1150px;
+    padding-left: 110px;
+    padding-right: 225px;
+    display: flex;
+    align-items: baseline;
+  }
+
+  .order__color-wrapper {
+    padding-right: 190px;
+  }
+
+  .order__legend {
+    min-width: 115px;
+  }
+
+  .order__add-group {
+    width: 1150px;
+    padding: 0 225px;
+  }
 }

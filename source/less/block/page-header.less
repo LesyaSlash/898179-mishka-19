@@ -7,9 +7,60 @@
 
 .page-header__logo {
   display: inline-block;
+  height: 35px;
   margin-bottom: 22px;
 }
 
 .page-header__toggle {
   position: absolute;
+  top: 20px;
+  right: 31px;
+}
+
+.page-header__text {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    .container-tablet();
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: none;
+  }
+
+  .page-header__logo {
+    .padding(22px; 20px);
+    height: 46px;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+
+  .page-header__text {
+    display: block;
+    margin: 0;
+    padding: 0;
+    padding-top: 24px;
+    order: 3;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    .container-desktop();
+  }
+
+  .page-header__logo {
+    .padding(9px; 7px);
+    width: 149px;
+    height: 72px;
+    order: 2;
+  }
+
+  .page-header__text {
+    order: 5;
+  }
 }

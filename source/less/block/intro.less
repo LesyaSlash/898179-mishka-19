@@ -11,3 +11,27 @@
   line-height: 30px;
   text-align: center;
 }
+
+@media (min-width: @tablet-width) {
+  .intro {
+    .container-tablet();
+    padding-top: 124px;
+    background: @grey url("../img/hero-tablet@1x.jpg") no-repeat center;
+  }
+
+  .intro__title {
+    margin: 0 80px 371px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro {
+    .container-desktop();
+    padding-top: 120px;
+    background: @grey url("../img/hero-desktop@1x.jpg") no-repeat center;
+  }
+
+  .intro__title {
+    margin: 0 215px 354px;
+  }
+}

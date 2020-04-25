@@ -8,4 +8,22 @@
 
 .catalog__wrapper {
   .container();
+  padding-top: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__wrapper {
+    .container-tablet();
+    padding-top: 67px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__wrapper {
+    .container-desktop();
+    padding-top: 111px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }

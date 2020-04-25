@@ -1,5 +1,35 @@
 .page-footer {
-  .container();
   .padding(25px; 23px);
   background-color: @grey-bg;
+}
+
+.page-footer__wrapper {
+  .container();
+}
+
+.page-footer__logo {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    .padding(51px; 51px);
+  }
+
+  .page-footer__wrapper {
+    .container-tablet();
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .page-footer__logo {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    .container-desktop();
+  }
 }
