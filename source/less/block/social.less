@@ -1,11 +1,35 @@
 .social {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 24% 16px 22%;
+  border-bottom: 1px solid @grey;
+}
+
+.social__item {
+  margin-bottom: 5px;
+}
+
+.social__item:hover path {
+  fill: @light-green-hover;
+}
+
+.social__item:active path {
+  fill-opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
   .social {
-    margin: 0;
+    width: 32%;
+    padding: 8px 0 0 75px;
+    border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .social {
+    width: 20.5%;
   }
 }

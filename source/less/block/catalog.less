@@ -8,19 +8,46 @@
 
 .catalog__wrapper {
   .container();
+  width: 260px;
   padding-top: 30px;
 }
 
 @media (min-width: @tablet-width) {
+  .catalog__wrapper-title {
+    padding-top: 95px;
+    margin-top: -41px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-size: 770px 24px;
+    background-repeat: repeat-x;
+    background-position: left 0 bottom -16px;
+  }
+
+  .catalog__title {
+    .title-tablet();
+  }
+
   .catalog__wrapper {
     .container-tablet();
-    padding-top: 67px;
+    padding-top: 83px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .catalog__wrapper-title {
+    .padding(93px; 121px);
+    margin-top: -41px;
+    background-size: 1150px 34px;
+    background-repeat: repeat-x;
+    background-position: left -57px bottom;
+  }
+
+  .catalog__title {
+    .title-desktop();
+  }
+
   .catalog__wrapper {
     .container-desktop();
+    .max-width();
     padding-top: 111px;
     display: flex;
     flex-wrap: wrap;

@@ -20,16 +20,25 @@
     .container-tablet();
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
   }
 
   .page-footer__logo {
     display: block;
   }
+
+  .page-footer__logo:hover path {
+    fill: @light-green-hover;
+  }
+
+  .page-footer__logo:active path {
+    fill-opacity: 0.3;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .page-footer__wrapper {
-    .container-desktop();
+    width: 100%;
+    .max-width();
+    padding: 0 4.45%;
   }
 }

@@ -6,12 +6,28 @@
   .product-list {
     display: flex;
     order: 4;
-    padding-top: 24px;
+    padding-top: 16px;
+  }
+
+  .product-list__item {
+    margin-right: 62px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   .product-list__link {
     font-weight: bold;
     font-size: 15px;
     color: @black;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

@@ -1,14 +1,35 @@
 .modal {
-  .container();
-  .padding(36px; 46px);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.modal__open /*для JS*/ {
+  display: block;
+}
+
+.modal__form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 320px;
+  padding: 30px 29px 46px;
   text-align: center;
+  background-color: @white;
   box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
   border: solid 1px #c6c6c6;
 }
 
 .modal__title {
-  margin-bottom: 25px;
+  margin: 0;
+  margin-bottom: 12px;
+  padding: 0 50px;
   font-weight: bold;
   font-size: 25px;
   line-height: 30px;
@@ -17,15 +38,51 @@
 }
 
 .modal__text {
+  margin: 0;
   line-height: 30px;
 }
 
 .modal__wrapper {
-  margin-top: 28px;
-  margin-bottom: 31px;
+  margin-top: 24px;
+  margin-bottom: 25px;
+}
+
+.modal__label {
+  display: inline-block;
+  min-width: 82px;
+  padding: 16px 5px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 16px;
+  border: 2px solid rgba(68, 68, 68, 0.1);
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &:hover {
+    border: 2px solid @grey-form;
+  }
+
+  &:active {
+    border: 2px solid @light-green-form;
+  }
+}
+
+.modal__input:checked + .modal__label {
+  border: 2px solid @light-green-form;
+}
+
+.modal__input:disabled + .modal__label {
+  opacity: 0.6;
+  pointer-events: none;
+  background-color: @grey;
 }
 
 .modal__button {
+  .padding(19px; 17px);
   font-weight: bold;
   font-size: 17px;
   line-height: 16px;
@@ -35,8 +92,31 @@
 }
 
 @media (min-width: @tablet-width) {
-  .modal {
-    padding: 51px 108px 46px;
-    width: 556px;
+  .modal__form {
+    padding: 33px 50px 46px;
+    width: 568px;
+  }
+
+  .modal__title {
+    margin-bottom: 14px;
+    font-size: 30px;
+    line-height: 57px;
+  }
+
+  .modal__text {
+    font-size: 17px;
+  }
+
+  .modal__wrapper {
+    margin-top: 21px;
+    margin-bottom: 26px;
+  }
+
+  .modal__label {
+    min-width: 112px;
+  }
+
+  .modal__button {
+    width: 350px;
   }
 }
