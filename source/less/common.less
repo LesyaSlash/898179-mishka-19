@@ -10,7 +10,7 @@ html {
 
 body {
   min-width: 320px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 15px;
@@ -31,6 +31,7 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -43,18 +44,10 @@ img {
   overflow: hidden;
 }
 
-.section-title {
-  margin: 0;
-  font-weight: bold;
-  font-size: 25px;
-  line-height: 30px;
-  color: @black;
-}
-
 .button {
   display: inline-block;
   width: 100%;
-  .padding(18px; 18px);
+  .padding(14px; 14px);
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
@@ -63,10 +56,27 @@ img {
   text-transform: uppercase;
   background-color: @white;
   border: 2px solid @greyish-brown;
+
+  &:hover {
+    background-color: @greyish-brown;
+    color: @white;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.section-title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  color: @black;
 }
 
 .wrapper-title {
-  .padding(76px; 74px);
+  .padding(70px; 76px);
   text-align: center;
   background-color: @grey-bg;
 }

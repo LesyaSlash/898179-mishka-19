@@ -1,6 +1,7 @@
 .advantages {
-  .container();
-  .padding(34px; 60px);
+  width: auto;
+  .padding(26px; 29px);
+  padding-left: 8.8%;
 }
 
 .advantages__title {
@@ -8,31 +9,116 @@
 }
 
 .advantages__item {
-  .padding(55px; 30px);
+  position: relative;
+  .padding(57px; 26px);
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
   color: @black;
 }
 
+.advantages__item--hand-made,
+.advantages__item--support,
+.advantages__item--gift {
+  padding-left: 0.5%;
+}
+
+.advantages__item--eco,
+.advantages__item--north,
+.advantages__item--likes,
+.advantages__item--hand-made,
+.advantages__item--support,
+.advantages__item--gift {
+  &::before {
+    content: "";
+    position: absolute;
+  }
+}
+
+.advantages__item--eco::before {
+  top: 3px;
+  left: 10px;
+  width: 32px;
+  height: 37px;
+  background: url("../img/icon-feature-flower.svg") no-repeat;
+}
+
+.advantages__item--north::before {
+  top: 4px;
+  left: 2px;
+  width: 47px;
+  height: 27px;
+  background: url("../img/icon-feature-money.svg") no-repeat;
+}
+
+.advantages__item--likes::before {
+  top: 8px;
+  left: 9px;
+  width: 34px;
+  height: 27px;
+  background: url("../img/icon-feature-heart.svg") no-repeat;
+}
+
+.advantages__item--hand-made::before {
+  top: 6px;
+  left: 5px;
+  width: 35px;
+  height: 34px;
+  background: url("../img/icon-feature-ball.svg") no-repeat;
+}
+
+.advantages__item--support::before {
+  top: 7px;
+  left: -4px;
+  width: 55px;
+  height: 23px;
+  background: url("../img/icon-feature-rocket.svg") no-repeat;
+}
+
+.advantages__item--gift::before {
+  top: 5px;
+  left: 5px;
+  width: 33px;
+  height: 32px;
+  background: url("../img/icon-feature-gift.svg") no-repeat;
+}
+
 @media (min-width: @tablet-width) {
   .advantages {
     .container-tablet();
-    .padding(60px; 80px);
+    .padding(50px; 29px);
+  }
+
+  .advantages__title {
+    margin-left: -4px;
+    margin-bottom: 46px;
   }
 
   .advantages__list {
     column-count: 2;
+    column-gap: 0;
   }
 
   .advantages__item {
-    width: 300px;
+    width: 100%;
+    padding-bottom: 54px;
+    font-size: 20px;
+    line-height: 22px;
+
+    &--hand-made::before,
+    &--gift::before {
+      left: 3px;
+    }
+
+    &--support::before {
+      left: -6px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .advantages {
     .container-desktop();
-    padding: 70px 225px 89px;
+    padding: 58px 19.57% 36px;
   }
 }

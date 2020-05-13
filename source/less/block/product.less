@@ -1,32 +1,57 @@
 .product {
   margin-bottom: 30px;
-  border: 1px solid @grey;
+
+  &:last-child {
+    margin-bottom: 31px;
+  }
 }
 
 .product__image {
   display: block;
-  margin: 0;
-  border-top: 1px solid @grey;
+  margin: 0 auto;
+}
+
+.product__info-wrapper {
+  border: 1px solid @grey;
+}
+
+.product:hover .product__info-wrapper {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.product:active .product__info-wrapper {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 .product__title {
-  margin: 30px 28px 15px;
+  margin: 26px 0 5px 10.5%;
   font-size: 17px;
   line-height: 24px;
   color: @black;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .product__parameter {
   margin: 0;
-  margin-left: 28px;
-  margin-bottom: 26px;
+  margin-left: 10.4%;
+  margin-bottom: 19px;
   font-size: 13px;
   line-height: 30px;
 }
 
 .product__price-wrapper {
-  .padding(27px; 30px);
-  margin-left: 28px;
+  display: flex;
+  justify-content: space-between;
+  .padding(21px; 26px);
+  margin: 0 10.3%;
+  border-top: 1px solid @grey;
 }
 
 .product__price {
@@ -34,40 +59,88 @@
   color: @black;
 }
 
+.product__add-cart {
+  width: 22px;
+  overflow: hidden;
+}
+
+.product__add-icon path {
+  fill-opacity: 0.2;
+}
+
+.product__add-icon:hover path {
+  fill: @light-green;
+  fill-opacity: 1;
+}
+
+.product__add-icon:active path {
+  fill-opacity: 0.3;
+}
+
+
 @media (min-width: @tablet-width) {
   .product {
     display: flex;
-    min-height: 334px; /*временно для сетки*/
     margin-bottom: 54px;
+
+    &:last-child {
+      margin-bottom: 53px;
+    }
+  }
+
+  .product__image {
+    /*временно до вставки изображений*/
+    width: 333px;
+    height: 334px;
   }
 
   .product__info-wrapper {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    flex-grow: 1;
+    width: 51%;
   }
 
   .product__title {
-    margin-bottom: 15px;
+    margin: 25px auto 5px 8.6%;
+    font-size: 20px;
+  }
+
+  .product__title-bag {
+    margin-bottom: 8px;
   }
 
   .product__parameter {
     margin-bottom: auto;
+    margin-left: 8.6%;
+    font-size: 15px;
   }
 
   .product__price-wrapper {
     display: flex;
     justify-content: space-between;
+    .padding(22px; 25px);
+    margin-right: 9.6%;
     border-top: 1px solid @grey;
+  }
+
+  .product__price {
+    font-size: 17px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .product {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     width: 316px;
-    min-height: 660px; /*временно для сетки*/
     margin-bottom: 57px;
+
+    &:last-of-type {
+      margin-right: 4px;
+      margin-bottom: 57px;
+    }
   }
 
   .product__image {
@@ -75,6 +148,28 @@
   }
 
   .product__info-wrapper {
-    min-height: 215px;
+    position: relative;
+    flex-grow: 1;
+    min-height: 197px;
+    width: 100%;
+  }
+
+  .product__title-bag {
+    margin-bottom: 5px;
+  }
+
+  .product__parameter {
+    margin-bottom: 5px;
+  }
+
+  .product__price-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 8.6%;
+    display: flex;
+    justify-content: space-between;
+    width: 258px;
+    .padding(22px; 25px);
+    margin: 0;
   }
 }
