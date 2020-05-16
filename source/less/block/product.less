@@ -9,9 +9,12 @@
 .product__image {
   display: block;
   margin: 0 auto;
+  width: 260px;
+  height: 195px;
 }
 
 .product__info-wrapper {
+  padding: 0 27px;
   border: 1px solid @grey;
 }
 
@@ -24,7 +27,7 @@
 }
 
 .product__title {
-  margin: 26px 0 5px 10.5%;
+  margin: 26px 0 5px 0;
   font-size: 17px;
   line-height: 24px;
   color: @black;
@@ -40,7 +43,6 @@
 
 .product__parameter {
   margin: 0;
-  margin-left: 10.4%;
   margin-bottom: 19px;
   font-size: 13px;
   line-height: 30px;
@@ -50,7 +52,6 @@
   display: flex;
   justify-content: space-between;
   .padding(21px; 26px);
-  margin: 0 10.3%;
   border-top: 1px solid @grey;
 }
 
@@ -89,8 +90,7 @@
   }
 
   .product__image {
-    /*временно до вставки изображений*/
-    width: 333px;
+    width: 334px;
     height: 334px;
   }
 
@@ -98,11 +98,11 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    width: 51%;
+    width: 337px;
   }
 
   .product__title {
-    margin: 25px auto 5px 8.6%;
+    margin: 25px 0 5px;
     font-size: 20px;
   }
 
@@ -112,7 +112,6 @@
 
   .product__parameter {
     margin-bottom: auto;
-    margin-left: 8.6%;
     font-size: 15px;
   }
 
@@ -120,7 +119,8 @@
     display: flex;
     justify-content: space-between;
     .padding(22px; 25px);
-    margin-right: 9.6%;
+    margin-right: 3px;
+    margin-left: 4px;
     border-top: 1px solid @grey;
   }
 
@@ -138,13 +138,14 @@
     margin-bottom: 57px;
 
     &:last-of-type {
-      margin-right: 4px;
-      margin-bottom: 57px;
+      margin-right: 2px;
+      margin-bottom: 56px;
     }
   }
 
   .product__image {
-    height: 462px; /*временно для сетки*/
+    width: 316px;
+    height: 463px;
   }
 
   .product__info-wrapper {
@@ -152,6 +153,11 @@
     flex-grow: 1;
     min-height: 197px;
     width: 100%;
+    padding: 0 26px;
+  }
+
+  .product__title {
+    margin-top: 24px;
   }
 
   .product__title-bag {
@@ -165,7 +171,7 @@
   .product__price-wrapper {
     position: absolute;
     bottom: 0;
-    left: 8.6%;
+    left: 26px;
     display: flex;
     justify-content: space-between;
     width: 258px;

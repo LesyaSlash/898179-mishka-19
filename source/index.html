@@ -107,24 +107,28 @@
                 <td class="week-product__value week-product__table-cell">15 см</td>
               </tr>
             </table>
-            <img class="week-product__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Фото товара Вязаные корзинки">
+          </div>
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <img class="week-product__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Фото товара Вязаные корзинки">
+          </picture>
+          <div class="week-product__price-wrapper">
             <p class="week-product__price">Цена: 990 руб.</p>
             <a class="week-product__add-cart add-cart button" href="#">Заказать</a>
           </div>
-        </div>
+          </div>
       </section>
       <section class="advantages">
-        <div class="advantages__wrapper">
-          <h2 class="advantages__title section-title">Коротко о нас:</h2>
-          <ul class="advantages__list">
-            <li class="advantages__item advantages__item--eco">Экологически<br> чистые материалы</li>
-            <li class="advantages__item advantages__item--north">Скандинавский стиль<br> по российской цене</li>
-            <li class="advantages__item advantages__item--likes">Увеличивает лайки<br> на фотографиях</li>
-            <li class="advantages__item advantages__item--hand-made">Связано вручную с<br> любовью и умилением</li>
-            <li class="advantages__item advantages__item--support">Поддержка отечественного производителя</li>
-            <li class="advantages__item advantages__item--gift">Поставляется в<br> подарочной упаковке</li>
-          </ul>
-        </div>
+        <h2 class="advantages__title section-title">Коротко о нас:</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item advantages__item--eco">Экологически<br> чистые материалы</li>
+          <li class="advantages__item advantages__item--north">Скандинавский стиль<br> по российской цене</li>
+          <li class="advantages__item advantages__item--likes">Увеличивает лайки<br> на фотографиях</li>
+          <li class="advantages__item advantages__item--hand-made">Связано вручную с<br> любовью и умилением</li>
+          <li class="advantages__item advantages__item--support">Поддержка отечественного производителя</li>
+          <li class="advantages__item advantages__item--gift">Поставляется в<br> подарочной упаковке</li>
+        </ul>
       </section>
       <section class="reviews">
         <div class="reviews__wrapper">
@@ -164,7 +168,12 @@
           </table>
         </div>
         <div class="contacts__map contacts-map">
-          <img class="contacts-map__image" src="img/map-mobile@1x.jpg" width="322" height="457" alt="Карта">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+            <img class="contacts-map__image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x"
+              alt="Карта">
+          </picture>
         </div>
         <div class="contacts__wrapper-button">
           <a class="contacts__write button" href="#">Напишите нам</a>
@@ -309,5 +318,6 @@
         modalOrder.classList.remove("modal__open");
       });
     </script>
+<!--    <script src="js/picturefill.min.js"></script>-->
   </body>
 </html>

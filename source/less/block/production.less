@@ -1,5 +1,6 @@
 .production {
-  .container();
+  width: 260px;
+  margin: 0 auto;
   .padding(23px; 32px);
   margin-bottom: 58px;
   border: 1px solid @grey;
@@ -16,7 +17,7 @@
 .production__title {
   position: relative;
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
   padding-left: 89px;
   font-size: 17px;
   line-height: 24px;
@@ -38,10 +39,18 @@
   text-align: center;
 }
 
+.production__image {
+  display: block;
+  width: 260px;
+  height: 150px;
+}
+
 .production__video--icon {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 101px;
+  height: 77px;
   transform: translate(-50%, -50%);
   z-index: 2;
 
@@ -56,7 +65,7 @@
 }
 
 .production__wrapper {
-  padding: 22px 33px 0;
+  padding: 27px 33px 0;
 }
 
 .production__text {
@@ -74,7 +83,7 @@
 
 @media (min-width: @tablet-width) {
   .production {
-    .container-tablet;
+    width: 668px;
     .padding(0; 0);
     margin-bottom: 63px;
     display: flex;
@@ -84,8 +93,11 @@
   .production__video {
     position: relative;
     order: -1;
-    min-height: 455px; /*временно для сетки*/
-    width: 668px; /*временно для сетки*/
+  }
+
+  .production__image {
+    width: 668px;
+    height: 455px;
   }
 
   .production__title {
@@ -120,10 +132,8 @@
   .production {
     min-height: 455px;
     position: relative;
-    width: 91.3%;
-    .max-width();
-    padding-right: 4.85%;
-    margin-bottom: 105px;
+    width: 1050px;
+    margin-bottom: 104px;
     flex-grow: 1;
     flex-direction: column;
     align-items: flex-end;
@@ -133,36 +143,39 @@
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  .production__image {
     width: 682px;
     height: 455px;
   }
 
   .production__title {
-    width: 30%;
-    padding: 95px 20px 33px 6.45%;
+    width: 300px;
+    padding: 95px 50px 33px 11px;
     margin: 0;
 
     &::before {
-      top: 41px;
-      left: 66px;
+      top: 40px;
+      left: 13px;
     }
   }
 
   .production__wrapper {
-    width: 30%;
+    width: 300px;
     padding: 0;
     padding-bottom: 20px;
   }
 
   .production__text {
     padding: 0;
-    padding-left: 21.65%;
+    padding-left: 11px;
     margin: 0;
-    margin-bottom: 46px;
+    margin-bottom: 45px;
   }
 
   .production__order {
-    width: 77.3%;
-    margin-left: 22.2%;
+    width: 230px;
+    margin-left: 13px;
   }
 }

@@ -3,7 +3,8 @@
 }
 
 .contacts__wrapper {
-  width: 83%;
+  width: 320px;
+  padding: 0 27px;
   margin: 0 auto;
 }
 
@@ -32,7 +33,7 @@
   padding-bottom: 2px;
   display: inline-block;
   color: inherit;
-  box-shadow: 0 1px 0 0 @light-green-form;
+  box-shadow: 0 2px 0 -1px @light-green-form;
 
   &:hover {
     color: @light-green-hover;
@@ -56,13 +57,15 @@
 }
 
 .contacts__map {
-  margin-top: 35px;
-  margin-bottom: 34px;
+  margin-top: 36px;
+  margin-bottom: 33px;
   width: 100%;
   text-align: center;
 }
 
 .contacts-map__image {
+  width: 322px;
+  height: 457px;
   background-color: @light-pink;
 }
 
@@ -72,23 +75,24 @@
 
 @media (min-width: @tablet-width) {
   .contacts {
-    position: relative;
     .padding(62px; 57px);
+  }
+
+  .contacts__wrapper {
+    position: relative;
+    width: 768px;
+    padding: 0 46px;
+    margin: 0 auto;
 
     &::before {
       content: "";
       position: absolute;
-      top: 47px;
+      top: -15px;
       right: 6.9%;
       height: 81px;
       width: 47px;
       background-image: url("../img/icon-flag.svg");
     }
-  }
-
-  .contacts__wrapper {
-    width: 88.25%;
-    margin: 0 auto;
   }
 
   .contacts__title {
@@ -107,7 +111,7 @@
   }
 
   .contacts__table-row {
-    width: 49.65%;
+    width: 333px;
     padding: 0;
   }
 
@@ -132,6 +136,11 @@
     margin-bottom: 49px;
   }
 
+  .contacts-map__image {
+    width: 768px;
+    height: 457px;
+  }
+
   .contacts__wrapper-button {
     width: 100%;
     text-align: center;
@@ -146,23 +155,23 @@
 @media (min-width: @desktop-width) {
   .contacts {
     .container-desktop();
-    .max-width();
     .padding (70px; 47px);
     position: relative;
     display: flex;
     flex-wrap: wrap;
-
-    &::before {
-      top: 132px;
-      left: 113px;
-      width: 46px;
-    }
   }
 
   .contacts__wrapper {
     padding: 71px 0 0 171px;
     margin: 0;
+    margin-right: 24px;
     width: 500px;
+
+    &::before {
+      top: 62px;
+      left: 63px;
+      width: 46px;
+    }
   }
 
   .contacts__title {
@@ -187,6 +196,11 @@
   .contacts__map {
     margin: 0;
     width: 525px;
+  }
+
+  .contacts-map__image {
+    width: 525px;
+    height: 457px;
   }
 
   .contacts__wrapper-button {

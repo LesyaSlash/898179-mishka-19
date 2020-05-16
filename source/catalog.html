@@ -86,8 +86,11 @@
         <div class="catalog__wrapper">
           <article class="product">
             <a class="product__link" href="#">
-              <img class="product__image"
-                src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Фото товара Зайчик-попрыгайчик">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"  srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
+                <img class="product__image" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" alt="Фото товара Зайчик-попрыгайчик">
+              </picture>
             </a>
             <div class="product__info-wrapper">
               <a class="product__link" href="#">
@@ -110,8 +113,10 @@
           </article>
           <article class="product">
             <a class="product__link" href="#">
-              <img class="product__image" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195"
-                alt="Фото товара Корзинка для белья">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
+                <img class="product__image" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" alt="Фото товара Корзинка для белья">
             </a>
             <div class="product__info-wrapper">
               <a class="product__link" href="#">
@@ -134,8 +139,11 @@
           </article>
           <article class="product">
             <a class="product__link" href="#">
-              <img class="product__image" src="img/photo-toys-mobile@1x.jpg" width="260" height="195"
-                alt="Фото товара Большая корзинка для игрушек">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"  srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
+                <img class="product__image" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" alt="Фото товара Большая корзинка для игрушек">
+              </picture>
             </a>
             <div class="product__info-wrapper">
               <a class="product__link" href="#">
@@ -161,7 +169,11 @@
       <section class="production">
         <h2 class="production__title">Процесс производства</h2>
         <div class="production__video">
-          <img class="production__image" src="img/video-mobile@1x.jpg" width="260" height="150" alt="Видео процесса производства">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img class="production__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Видео процесса производства">
+          </picture>
           <svg class="production__video--icon" width="100.678px" height="76.891px"
             viewBox="247.3 382.56 100.678 76.891" enable-background="new 247.3 382.56 100.678 76.891"
             xml:space="preserve">
@@ -320,5 +332,6 @@
         modalOrder.classList.remove("modal__open");
       });
     </script>
+    <script src="js/picturefill.min.js"></script>
   </body>
 </html>

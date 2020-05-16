@@ -205,7 +205,7 @@
 }
 
 .order__note {
-  margin: 10 0 31px -1px;
+  margin: 10px 0 31px -1px;
   font-size: 14px;
   line-height: 16px;
 }
@@ -243,7 +243,7 @@
   }
 
   .order__field-group {
-    padding: 50px 6.6% 14px;
+    padding: 50px 50px 14px;
     display: flex;
     align-items: baseline;
     border: none;
@@ -263,12 +263,6 @@
     &--mail {
       .padding(0; 22px);
     }
-
-    /*&--color,
-    &--phone,
-    &--mail {
-
-    }*/
   }
 
   .order__field-wrapper {
@@ -277,7 +271,7 @@
 
   .order__legend {
     display: block;
-    min-width: 24.9%;
+    min-width: 167px;
 
     &::after {
       display: none;
@@ -297,7 +291,6 @@
 
   .order__item {
     display: flex;
-    /*justify-content: space-between;   в IE расползается*/
     justify-content: flex-start;
     align-items: baseline;
     padding-top: 15px;
@@ -394,7 +387,7 @@
   }
 
   .order__submit {
-    width: 34.5%;
+    width: 230px;
     .padding(17px; 15px);
     order: -1;
     font-size: 17px;
@@ -433,49 +426,49 @@
   }
 
   .order__field-group {
-    max-width: 1880px;
+    width: 1150px;
     margin: 0 auto;
-    padding: 50px 9.9% 13px;
+    padding: 50px 114px 13px;
 
     &--color {
-      padding-left: 9.6%;
+      padding-left: 110px;
       padding-bottom: 16px;
     }
 
     &--name {
-      padding-left: 9.65%;
+      padding-left: 111px;
       padding-top: 40px;
       padding-bottom: 4px;
     }
 
     &--phone {
-      padding-left: 9.8%;
+      padding-left: 112px;
       padding-top: 54px;
       padding-bottom: 0;
     }
 
     &--mail {
       padding-top: 0;
-      padding-left: 9.7%;
+      padding-left: 112px;
       padding-bottom: 22px;
       align-items: flex-start;
     }
 
     &--comments {
-      padding-left: 9.75%;
+      padding-left: 112px;
       padding-bottom: 49px;
     }
   }
 
   .order__legend {
-    min-width: 12%;
+    min-width: 111px;
 
     &--color {
-      min-width: 12.35%;
+      min-width: 115px;
     }
 
     &--name {
-      min-width: 12.55%;
+      min-width: 116px;
     }
 
     &--mail {
@@ -483,7 +476,7 @@
     }
 
     &--comments {
-      min-width: 12.2%;
+      min-width: 113px;
     }
   }
 
@@ -494,7 +487,7 @@
 
     &--phone,
     &--mail {
-      margin-right: 12%;
+      margin-right: 112px;
     }
   }
 
@@ -503,21 +496,16 @@
   }
 
   .order__item--name {
-    margin-right: 13.8%;
+    margin-right: 112px;
   }
 
   .order__field--comments {
-    width: 75.8%;
+    width: 700px;
   }
 
   .order__add-group {
     width: 100%;
-    max-width: 1908px;
     margin: 0 auto;
-    padding: 0 19.55%;
-  }
-
-  .order__submit {
-    width: 32.8%;
+    padding: 0 225px;
   }
 }
