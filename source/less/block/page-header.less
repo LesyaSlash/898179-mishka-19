@@ -74,13 +74,10 @@
   }
 
   .page-header {
-    width: auto;
-    padding: 0 50px;
+    .container-tablet();
     display: flex;
-    z-index: 2;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 0;
     border: none;
     background-color: transparent;
   }
@@ -89,7 +86,6 @@
     padding-top: 22px;
     height: auto;
     margin-bottom: 0;
-    margin-right: 27.4%;
   }
 
   .page-header__logo-icon {
@@ -113,12 +109,11 @@
 @media (min-width: @desktop-width) {
   .page-header {
     .container-desktop();
-    .max-width();
   }
 
   .page-header__logo {
     flex-grow: 1;
-    padding-left: 6%;
+    padding-left: 60px;
     text-align: left;
     width: 149px;
     height: 72px;
