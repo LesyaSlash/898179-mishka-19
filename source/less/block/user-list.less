@@ -8,6 +8,8 @@
 
 .user-list__icon {
   position: absolute;
+  fill: @greyish-brown;
+  opacity: 0.2;
 
   &--search {
     top: 31px;
@@ -20,30 +22,26 @@
   }
 }
 
-.user-list__icon path {
-  fill-opacity: 0.2;
-}
-
 .user-list__link {
   font-weight: bold;
   font-size: 17px;
   color: @black;
 
+  &:hover .user-list__icon {
+    opacity: 1;
+    fill: @light-green;
+  }
+
   &:hover span {
     opacity: 0.6;
   }
 
-  &:hover path {
-    fill: @light-green;
-    fill-opacity: 1;
+  &:active .user-list__icon {
+    opacity: 0.3;
   }
 
   &:active span {
     opacity: 0.3;
-  }
-
-  &:active path {
-    fill-opacity: 0.3;
   }
 }
 

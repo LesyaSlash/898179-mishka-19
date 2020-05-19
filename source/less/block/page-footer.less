@@ -21,14 +21,14 @@
 
   .page-footer__logo {
     display: block;
-  }
 
-  .page-footer__logo:hover path {
-    fill: @light-green-hover;
-  }
+    &:hover:not(.page-footer__logo--current-page) {
+      fill: @light-green-hover;
+    }
 
-  .page-footer__logo:active path {
-    fill-opacity: 0.3;
+    &:active:not(.page-footer__logo--current-page) {
+      opacity: 0.3;
+    }
   }
 }
 

@@ -61,6 +61,13 @@
   }
 }
 
+.order__list {
+  &--phone,
+  &--mail {
+    position: relative;
+  }
+}
+
 .order__item {
   padding-top: 9px;
   margin-bottom: 9px;
@@ -196,12 +203,35 @@
   &:active {
     border-color: @light-green-form;
   }
+
+  &--phone-icon,
+  &--mail-icon {
+    position: absolute;
+    top: -4px;
+    opacity: 0.2;
+  }
+
+  &--phone-icon {
+    right: 8px;
+  }
+
+  &--mail-icon {
+    right: -3px;
+  }
 }
 
 .order__field::placeholder {
   font-size: 17px;
   line-height: 18px;
   color: @grey-form;
+}
+
+.order__field:hover + .order__field--phone-icon,
+.order__field:active + .order__field--phone-icon,
+.order__field:hover + .order__field--mail-icon,
+.order__field:active + .order__field--mail-icon {
+  fill: @light-green-form;
+  opacity: 1;
 }
 
 .order__note {
@@ -367,6 +397,16 @@
     &--name {
       height: 47px;
     }
+
+    &--phone-icon {
+      top: 7px;
+      right: 26px;
+    }
+
+    &--mail-icon {
+      top: 7px;
+      right: 15px;
+    }
   }
 
   .order__field--phone,
@@ -501,6 +541,16 @@
 
   .order__field--comments {
     width: 700px;
+  }
+
+  .order__field {
+    &--phone-icon {
+      right: 7px;
+    }
+
+    &--mail-icon {
+      right: -4px;
+    }
   }
 
   .order__add-group {
