@@ -12,12 +12,14 @@
   margin-bottom: 5px;
 }
 
-.social__item:hover path {
-  fill: @light-green-hover;
-}
+.social__link {
+  &:hover .social__icon {
+    fill: @light-green-hover;
+  }
 
-.social__item:active path {
-  fill-opacity: 0.3;
+  &:active .social__icon {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {

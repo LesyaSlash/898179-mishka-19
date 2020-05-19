@@ -65,19 +65,18 @@
   overflow: hidden;
 }
 
-.product__add-icon path {
-  fill-opacity: 0.2;
-}
+.product__add-icon {
+  opacity: 0.2;
 
-.product__add-icon:hover path {
-  fill: @light-green;
-  fill-opacity: 1;
-}
+  &:hover {
+    fill: @light-green;
+    opacity: 1;
+  }
 
-.product__add-icon:active path {
-  fill-opacity: 0.3;
+  &:active {
+    opacity: 0.3;
+  }
 }
-
 
 @media (min-width: @tablet-width) {
   .product {
