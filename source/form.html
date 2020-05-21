@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Форма заказа</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header__wrapper">
@@ -172,7 +172,7 @@
           <li class="social__item">
             <a class="social__link social__link--instagram" href="#">
               <svg class="social__icon" width="22px" height="21px">
-                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                <use xlink:href="img/sprite.svg#icon-insta"></use>
               </svg>
               <span class="visually-hidden">Мы в Инстаграме</span>
             </a>
@@ -197,30 +197,13 @@
         <a class="copyright copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="copyright__text">Разработано</span>
           <svg class="copyright__logo" width="27px" height="34px">
-            <use xlink:href="img/sprite.svg#copyright-logo"></use>
+            <use xlink:href="img/sprite.svg#htmlacademy"></use>
           </svg>
         </a>
       </div>
     </footer>
 
-    <script>
-      var navHead = document.querySelector(".page-header");
-      var navToggle = document.querySelector(".page-header__toggle");
-
-      navHead.classList.remove("page-header--no-js");
-      navHead.classList.add("page-header--closed-menu");
-
-      navToggle.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        if (navHead.classList.contains("page-header--closed-menu")) {
-          navHead.classList.remove("page-header--closed-menu");
-          navHead.classList.add("page-header--opened-menu");
-        } else {
-          navHead.classList.remove("page-header--opened-menu");
-          navHead.classList.add("page-header--closed-menu");
-        }
-      });
-    </script>
+    <script src="js/script.js"></script>
     <script src="js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>
   </body>
