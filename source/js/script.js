@@ -1,9 +1,9 @@
 //мобильное меню
 
-var navHead = document.querySelector(".page-header");
+var navHead = document.querySelector(".page-header__wrapper");
 var navToggle = document.querySelector(".page-header__toggle");
 
-navHead.classList.remove("page-header--no-js");
+navHead.classList.remove("page-header__no-js");
 navHead.classList.add("page-header--closed-menu");
 
 navToggle.addEventListener("click", function (evt) {

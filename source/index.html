@@ -5,15 +5,16 @@
     <title>Магазин «Мишка»</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
   </head>
   <body>
-    <header class="page-header__wrapper">
-      <div class="page-header page-header--no-js">
-        <a class="page-header__logo">
+    <header class="page-header">
+      <div class="page-header__wrapper page-header__no-js">
+        <a class="page-header__logo page-header__logo--current-page">
           <picture>
             <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img src="img/logo-mobile.svg" alt="Логотип магазина "Мишка"">
+            <img src="img/logo-mobile.svg" alt="Логотип магазина «Мишка»">
           </picture>
         </a>
         <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -30,15 +31,15 @@
         <ul class="user-list">
           <li class="user-list__item user-list__item--search">
             <a class="user-list__link user-list__link--search" href="#">
-              <svg class="user-list__icon user-list__icon--search" width="18px" height="18px">
+              <svg class="user-list__icon user-list__icon--search" width="18" height="18">
                 <use xlink:href="img/sprite.svg#icon-search"></use>
               </svg>
-              <span>Поиск по сайту<span>
+              <span>Поиск по сайту</span>
             </a>
           </li>
           <li class="user-list__item user-list__item--cart">
             <a class="user-list__link user-list__link--cart" href="#">
-              <svg class="user-list__icon user-list__icon--cart" width="21px" height="18px">
+              <svg class="user-list__icon user-list__icon--cart" width="21" height="18">
                 <use xlink:href="img/sprite.svg#icon-cart"></use>
               </svg>
               <span>Корзина: пока пуста</span>
@@ -60,17 +61,17 @@
       <section class="intro">
         <h1 class="intro__title">Милые штуки ручной<br> работы для дома</h1>
         <ul class="intro__list intro-list">
-          <li class="intro-list__item"><a class="intro-list__link intro-list__link--interior" href="#">Предметы<br> интерьера</a></li>
-          <li class="intro-list__item"><a class="intro-list__link intro-list__link--toys" href="#">Детские<br> игрушки</a></li>
+          <li class="intro-list__item"><a class="intro-list__link intro-list__link--interior" href="catalog/interior.html">Предметы<br> интерьера</a></li>
+          <li class="intro-list__item"><a class="intro-list__link intro-list__link--toys" href="catalog/toys.html">Детские<br> игрушки</a></li>
         </ul>
       </section>
       <section class="week-product">
-        <div class="week-product__title--wrapper">
+        <div class="week-product__title-wrapper">
           <h2 class="week-product__title section-title">Вязаные корзинки</h2>
           <h3 class="week-product__mark">Товар<br> недели</h3>
         </div>
         <div class="week-product__wrapper">
-          <div class="week-product__info--wrapper">
+          <div class="week-product__info-wrapper">
             <p class="week-product__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.</p>
             <table class="week-product__info">
               <tr class="week-product__table-row">
@@ -129,14 +130,14 @@
             <button class="reviews__toggle reviews__next" type="button"><span class="visually-hidden">Следующий
                 отзыв</span></button>
           </div>
-          <a class="reviews__write button" href="#">Написать</a>
+          <a class="reviews__write button" href="add-review.html">Написать</a>
         </div>
       </section>
       <section class="contacts">
         <div class="contacts__wrapper">
           <h2 class="contacts__title">Контакты</h2>
           <table class="contacts__info">
-            <tbody class="contacts__info--wrapper">
+            <tbody class="contacts__info-wrapper">
               <tr class="contacts__table-row">
                 <td class="contacts__parameter contacts__table-cell">e-mail:</td>
                 <td class="contacts__value contacts__value--mail contacts__table-cell"><a href="mailto:info@mimimishkashop.ru" target="_blank" rel="noopener noreferrer">info@mimimishkashop.ru</a></td>
@@ -164,21 +165,21 @@
           </picture>
         </div>
         <div class="contacts__wrapper-button">
-          <a class="contacts__write button" href="#">Напишите нам</a>
+          <a class="contacts__write button" href="write-us.html">Напишите нам</a>
         </div>
       </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a class="page-footer__logo page-footer__logo--current-page">
-          <svg width="102px" height="34px">
+          <svg width="102" height="34" aria-label="Переход на главную страницу">
             <use xlink:href="img/sprite.svg#logo-footer"></use>
           </svg>
         </a>
         <ul class="social">
           <li class="social__item">
             <a class="social__link social__link--instagram" href="#">
-              <svg class="social__icon" width="22px" height="21px">
+              <svg class="social__icon" width="22" height="21">
                 <use xlink:href="img/sprite.svg#icon-insta"></use>
               </svg>
               <span class="visually-hidden">Мы в Инстаграме</span>
@@ -186,7 +187,7 @@
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" href="#">
-              <svg class="social__icon" width="15px" height="28px">
+              <svg class="social__icon" width="15" height="28">
                 <use xlink:href="img/sprite.svg#icon-fb"></use>
               </svg>
               <span class="visually-hidden">Мы в Фейсбуке</span>
@@ -194,16 +195,16 @@
           </li>
           <li class="social__item">
             <a class="social__link social__link--twitter" href="#">
-              <svg class="social__icon" width="23px" height="20px">
+              <svg class="social__icon" width="23" height="20">
                 <use xlink:href="img/sprite.svg#icon-twitter"></use>
               </svg>
               <span class="visually-hidden">Мы в Твиттере</span>
             </a>
           </li>
         </ul>
-        <a class="copyright copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="copyright__text">Разработано</span>
-          <svg class="copyright__logo" width="27px" height="34px">
+          <svg class="copyright__logo" width="27" height="34" aria-label="HTML Academy">
             <use xlink:href="img/sprite.svg#htmlacademy"></use>
           </svg>
         </a>
@@ -227,7 +228,6 @@
     </section>
 
     <script src="js/script.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=4707c4ad-9015-4bce-bcb6-02416112a083&lang=ru_RU" type="text/javascript"></script>
     <script src="js/api.js"></script>
     <script src="js/picturefill.min.js"></script>
     <script src="js/svg4everybody.min.js"></script>
