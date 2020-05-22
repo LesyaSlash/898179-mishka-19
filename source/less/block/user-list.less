@@ -27,9 +27,14 @@
   font-size: 17px;
   color: @black;
 
+  &:focus .user-list__icon {
+    outline: 2px solid rgba(0, 0, 0, 0.5);
+  }
+
   &:hover .user-list__icon {
     opacity: 1;
     fill: @light-green;
+    outline: 2px solid rgba(0, 0, 0, 0.2);
   }
 
   &:hover span {
@@ -38,6 +43,7 @@
 
   &:active .user-list__icon {
     opacity: 0.3;
+    outline: 2px solid rgba(0, 0, 0, 0.5);
   }
 
   &:active span {
