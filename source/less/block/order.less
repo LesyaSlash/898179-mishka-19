@@ -246,9 +246,9 @@
 
 @media (min-width: @tablet-width) {
   .order__wrapper-title {
-    padding-top: 93px;
+    padding-top: 95px;
     padding-bottom: 80px;
-    margin-top: -41px;
+    margin-top: -43px;
     background-image: url("../img/bg-zigzag-fill.svg");
     background-size: 770px 24px;
     background-repeat: repeat-x;
@@ -272,7 +272,7 @@
   }
 
   .order__field-group {
-    padding: 50px 50px 14px;
+    padding: 50px 50px 9px;
     display: flex;
     align-items: baseline;
     border: none;
@@ -322,6 +322,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
+    min-height: 52px;
     padding-top: 15px;
     padding-bottom: 13px;
     margin-bottom: 24px;
@@ -389,6 +390,8 @@
     &--phone,
     &--mail {
       height: 48px;
+      padding-top: 10px;
+      padding-bottom: 16px;
       padding-left: 17px;
       background-color: transparent;
     }
@@ -421,7 +424,7 @@
 
   .order__add-group {
     .container-tablet();
-    padding-top: 39px;
+    padding-top: 44px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -445,8 +448,7 @@
 
 @media (min-width: @desktop-width) {
   .order__wrapper-title {
-    .padding(93px; 121px);
-    margin-top: -41px;
+    padding-bottom: 121px;
     background-size: 1150px 34px;
     background-repeat: repeat-x;
     background-position: left -57px bottom;
@@ -469,7 +471,7 @@
   .order__field-group {
     width: 1150px;
     margin: 0 auto;
-    padding: 50px 114px 13px;
+    padding: 50px 114px 8px;
 
     &--color {
       padding-left: 110px;
@@ -532,12 +534,14 @@
     }
   }
 
-  .order__item--color {
-    min-width: 263px;
-  }
+  .order__item {
+    &--color {
+      min-width: 263px;
+    }
 
-  .order__item--name {
-    margin-right: 112px;
+    &--name {
+      margin-right: 112px;
+    }
   }
 
   .order__field--comments {
