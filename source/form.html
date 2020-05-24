@@ -129,30 +129,24 @@
             </div>
           <div class="order__field-wrapper">
             <div class="order__field-group order__field-group--phone">
-              <p class="order__legend order__legend--phone">Тел</p>
-              <label class="order__list order__list--phone">
-                <span class="visually-hidden">Номер телефона:</span>
-                <input class="order__field order__field--phone" type="tel" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*"
+              <label class="order__legend order__legend--phone" for="phone">Тел</label>
+              <input class="order__field order__field--phone" type="tel" name="phone" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*"
                   pattern="[+]7\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" required>
-                <svg class="order__icon order__icon--phone" width="25" height="24">
-                  <use xlink:href="img/sprite.svg#icon-phone"></use>
-                </svg>
-              </label>
+              <svg class="order__icon order__icon--phone" width="25" height="24">
+                <use xlink:href="img/sprite.svg#icon-phone"></use>
+              </svg>
             </div>
             <div class="order__field-group order__field-group--mail">
-              <p class="order__legend order__legend--mail">E-mail</p>
-              <label class="order__list order__list--mail">
-                <span class="visually-hidden">Ваш e-mail:</span>
-                <input class="order__field order__field--mail" type="email" name="email" placeholder="Ваш Email*" required>
-                <svg class="order__icon order__icon--mail" width="46" height="32">
-                  <use xlink:href="img/sprite.svg#icon-mail"></use>
-                </svg>
-              </label>
+              <label class="order__legend order__legend--mail" for="email">E-mail</label>
+              <input class="order__field order__field--mail" type="email" name="email" id="email" placeholder="Ваш Email*" required>
+              <svg class="order__icon order__icon--mail" width="46" height="32">
+                <use xlink:href="img/sprite.svg#icon-mail"></use>
+              </svg>
             </div>
           </div>
             <div class="order__field-group order__field-group--comments">
-              <p class="order__legend order__legend--comments">Доп</p>
-              <textarea class="order__field order__field--comments" name="comment" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              <label class="order__legend order__legend--comments" for="comment">Доп</label>
+              <textarea class="order__field order__field--comments" name="comment" id="comment" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </div>
             <div class="order__add-group">
               <p class="order__note">*Поля обязательны для заполнения</p>
@@ -205,6 +199,7 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/picturefill.min.js"></script>
     <script src="js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>
   </body>

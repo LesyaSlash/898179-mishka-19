@@ -21,6 +21,11 @@
   margin: 0;
   padding: 0;
   border: none;
+
+  &--phone,
+  &--mail {
+    position: relative;
+  }
 }
 
 .order__legend {
@@ -58,13 +63,6 @@
 
   &--mail::after {
     width: 179px;
-  }
-}
-
-.order__list {
-  &--phone,
-  &--mail {
-    position: relative;
   }
 }
 
@@ -173,7 +171,7 @@
 
 .order__field {
   width: 100%;
-  font-size: 19px;
+  font-size: 17px;
   line-height: 18px;
   color: @greyish-brown;
 
@@ -181,14 +179,15 @@
   &--phone,
   &--mail {
     height: 49px;
-    padding-bottom: 7px;
+    padding-top: 10px;
+    padding-bottom: 16px;
     border: none;
     border-bottom: 2px solid @black;
   }
 
   &--phone,
   &--mail {
-    padding-right: 40px;
+    padding-right: 60px;
     margin-bottom: 32px;
   }
 
@@ -211,11 +210,15 @@
   font-size: 17px;
   line-height: 18px;
   color: @grey-form;
+
+  &--phone {
+    font-size: 19px;
+  }
 }
 
 .order__icon {
   position: absolute;
-  top: -4px;
+  top: 34px;
   opacity: 0.2;
 
   &--phone {
@@ -393,6 +396,7 @@
       padding-top: 10px;
       padding-bottom: 16px;
       padding-left: 17px;
+      font-size: 19px;
       background-color: transparent;
     }
 
@@ -412,13 +416,13 @@
 
   .order__icon {
     &--phone {
-      top: 7px;
-      right: 26px;
+      top: 61px;
+      right: 76px;
     }
 
     &--mail {
       top: 7px;
-      right: 15px;
+      right: 65px;
     }
   }
 
@@ -527,11 +531,6 @@
     &--color {
       justify-content: flex-start;
     }
-
-    &--phone,
-    &--mail {
-      margin-right: 112px;
-    }
   }
 
   .order__item {
@@ -544,17 +543,24 @@
     }
   }
 
-  .order__field--comments {
-    width: 700px;
+  .order__field {
+    &--phone,
+    &--mail {
+      margin-right: 111px;
+    }
+
+    &--comments {
+      width: 700px;
+    }
   }
 
   .order__icon {
     &--phone {
-      right: 7px;
+      right: 233px;
     }
 
     &--mail {
-      right: -4px;
+      right: 222px;
     }
   }
 
