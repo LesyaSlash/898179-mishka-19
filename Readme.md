@@ -8,7 +8,7 @@
  
  Сайт на <a href="https://lesyaslash.github.io/898179-mishka-19">github pages</a>.
 
-Автор: [Алеся Мацеральник](https://up.htmlacademy.ru/adaptive/19/user/898179).
+#### Автор: [Алеся Мацеральник](https://up.htmlacademy.ru/adaptive/19/user/898179).
 ---
 ## Сайт выполнен с использованием:
 <ul>
